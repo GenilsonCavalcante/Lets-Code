@@ -5,10 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkedin</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="corpo">
     <header>
-        <h1>Genilson Cavalcante de Oliveira</h1>
+        <div class="menu">
+
+            <div class="search">
+                <a href="#">
+                    <img src="assets/images/linkedin100x100.png" alt="Logo do Linkedin">
+                </a>
+                <form action="#">
+                    <label for="input_search">
+                        <img src="assets/images/loupe.png" alt="Imagem de uma lupa">
+                    </label>
+                    <input type="search" onclick="entrar()" onmouseout="sair()" name="search" id="input_search" placeholder="Pesquisar">
+                </form>
+            </div>
+            
+            <div class="icons">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/home-icon-silhouette.png" alt="Icon sobre a home">
+                                <div class="conteudo">Inicio</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/group-of-three-men-standing-side-by-side-hugging-each-other.png" alt="Icon sobre minha rede">
+                                <div class="conteudo">Minha rede</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/portfolio.png" alt="Icon sobre vagas">
+                                <div class="conteudo">Vagas</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/chat.png" alt="Icon sobre mensagens">
+                                <div class="conteudo">Mensagens</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/bell.png" alt="Icon sobre notificações">
+                                <div class="conteudo">Notificações</div>
+                            </a>
+                        </li>
+                    </ul>    
+                </nav> 
+            </div>
+
+            <div class="perfil">
+                <figure>
+                    <a href="#">
+                        <img src="assets/images/perfil-genilson400x400.png" alt="Minha foto em tamanho pequeno">
+                        <fieldset>Eu</fieldset>
+                    </a>
+                </figure>
+            </div>
+        </div>
     </header>
+
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
