@@ -1,12 +1,12 @@
 // SEARCH
 let corpo = document.getElementById('corpo');
-let entrou = document.getElementById('input_search');
+let conteudo = document.getElementById('conteudo');
 
 function entrar() {
-    entrou.style.width = "17rem";
+    conteudo.style.opacity = '0.4';
 }
 function sair() {
     document.getElementById("corpo").addEventListener("click", function() {
-        entrou.style.width = "12rem";
+        conteudo.style.opacity = '1';
     });
 }

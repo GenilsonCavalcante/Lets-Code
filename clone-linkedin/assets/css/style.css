@@ -83,6 +83,10 @@ header .menu .search form input {
     height: 2.125rem;
     font-size: .875rem;
     border-radius: .25rem;
+    transition: .4s;
+}
+header .menu .search form input:focus {
+    width: 17rem;
 }
 header .menu .search form label img{
     width: .7875rem;
