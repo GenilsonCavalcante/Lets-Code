@@ -1,4 +1,5 @@
 // SEARCH
+let corpo = document.getElementById('corpo');
 let entrou = document.getElementById('input_search');
 
 function entrar() {

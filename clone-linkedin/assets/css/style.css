@@ -4,8 +4,9 @@
 
 *** FONTES
 *** ROOT    = [VARIÁVEIS, ESTILOS GERAIS]
-*** HEADER  = [.SEARCH, .ICONS, .PERFIL]
-*** MAIN    = [.IMG-BANNER, .INFORMACOES, .BUTTONS]
+*** HEADER  = [.SEARCH, .ICONS, .FOTO-PERFIL]
+*** MAIN    = [.IMG-BANNER, .INFORMACOES, .BUTTONS, .SOBRE-MIM, .COMPETENCIAS]
+*** MEDIA QUERIES
 
 */
 
@@ -47,10 +48,10 @@ header {
     font-size: .9rem;
     text-align: center;
     background-color: var(--cor-primaria);
-    width: 100vw;
+    width: 100%;
 }
 header .menu{
-    max-width: 88vw; /*tamanho máximo: 843px*/
+    max-width: 105.6rem;
     height: 3.1875rem;
     margin: 0 4.8125rem;
 }
@@ -70,7 +71,7 @@ header .menu .search form {
     display: flex;
     align-items: center;
     margin-left: .5rem;
-    border-radius: 4px;
+    border-radius: .25rem;
 }
 header .menu .search form label {
     padding: 0 .3rem 0 .9rem;
@@ -81,7 +82,7 @@ header .menu .search form input {
     width: 12rem;
     height: 2.125rem;
     font-size: .875rem;
-    border-radius: 4px;
+    border-radius: .25rem;
 }
 header .menu .search form label img{
     width: .7875rem;
@@ -97,14 +98,22 @@ header .menu .icons ul li a img {
     height: 1.25rem;
 }
 header .menu .icons nav ul li{
-    padding: 0 1rem;
+    margin: 0 1rem;
+    opacity: .7;
+}
+header .menu .icons nav ul li:hover {
+    opacity: 1.0;
 }
 
-/*   HEADER - .PERFIL   */
-header .menu .foto-perfil figure a {
+/*   HEADER - .FOTO-PERFIL   */
+header .menu .icons nav ul li#foto-perfil {
+    opacity: 1.0;
+    margin-right: 0;
+}
+header .menu .icons nav ul li#foto-perfil a {
     color: var(--cor-texto-secundaria);
 }
-header .menu .foto-perfil figure a img {
+header .menu .icons nav ul li#foto-perfil a img {
     width: 1.586875rem;
     height: 1.58687rem;
 }
@@ -112,26 +121,26 @@ header .menu .foto-perfil figure a img {
 /*   MAIN   */
 main .carreira {
     background-color: var(--cor-primaria);
-    max-width: 88vw;
+    max-width: 105.6rem;
     border-radius: 10px;
     height: 20rem;
-    margin: 2.375rem 4.8125rem 2rem;
+    margin: 2.375rem 4.8125rem 1.375rem;
 }
 
 /*   MAIN - .IMG-BANNER   */
 main .carreira .img-banner img {
     max-width: 100%;
-    width: 88vw;
+    width: 105.6rem;
     height: 8.4375rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: .625rem;
+    border-top-right-radius: .625rem;
     object-fit: cover;
 }
 main .carreira .img-banner .perfil-genilson img{
     margin-left: 1.96125rem;
     transform: translateY(-75%);
-    border: 4px solid var(--cor-primaria);
-    box-shadow: 0 2px 5px rgb(139, 139, 139);
+    border: .25rem solid var(--cor-primaria);
+    box-shadow: 0 .125rem .3125rem rgb(139, 139, 139);
     border-radius: 50%;
     width: 6.665rem;
     height: 6.665rem;
@@ -159,42 +168,116 @@ main .carreira section.informacoes p {
     font-size: .8rem;
 }
 
-/*   MAIN - BUTTONS*/
-main .carreira .buttons {
+/*   MAIN - BUTTONS   */
+.buttons {
+    border-radius: .9375rem;
+    padding: .25rem 1rem;
+    margin-right: .4375rem;
+}
+main .carreira .button {
     font-family: Rambla, Arial, Helvetica, sans-serif;
-    margin-top: 11px;
+    margin-top: 1.2rem;
     margin-left: 1.375rem;
     font-weight: 500;
 }
-main .carreira .buttons button#interesses{
+main .carreira .button button#interesses{
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
-    margin-right: 7px;
-    padding: 4px 16px;
-    border-radius: 15px;
-    border: 1.5px solid var(--cor-terciaria);
+    border: .1rem solid var(--cor-terciaria);
 }
-main .carreira .buttons button#interesses:hover {
+main .carreira .button button#interesses:hover {
     background-color: #004e9c;
 }
 
-main .carreira .buttons button#sessao {
-    padding: 4px 16px;
-    margin-right: 7px;
-    border-radius: 15px;
-    border: 1.5px solid var(--cor-texto-secundaria);
+main .carreira .button button#sessao {
+    border: .1rem solid var(--cor-texto-secundaria);
 }
-main .carreira .buttons button#sessao:hover {
-    border: 1.5px solid var(--cor-texto-primaria);
+main .carreira .button button#sessao:hover {
+    border: .1rem solid var(--cor-texto-primaria);
     background-color: rgb(207, 207, 207);
 }
 
-main .carreira .buttons button#mais {
-    padding: 4px 16px;
-    border-radius: 15px;
-    border: 1.5px solid #666;
+main .carreira .button button#mais {
+    border: .1rem solid var(--cor-texto-secundaria);
 }
-main .carreira .buttons button#mais:hover {
-    border: 1.5px solid var(--cor-texto-primaria);
+main .carreira .button button#mais:hover {
+    border: .1rem solid var(--cor-texto-primaria);
     background-color: rgb(207, 207, 207);
+}
+
+/*   MAIN - .SOBRE-MIM   */
+main .sobre-mim {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-secundaria);
+    max-width: 105.6rem;
+    border-radius: 10px;
+    height: 15rem;
+    margin: 0 4.8125rem 1.375rem;
+}
+main .sobre-mim h2 {
+    color: var(--cor-texto-primaria);
+    padding: 1.3rem 1.375rem 0;
+    font-size: 1.28rem;
+    font-weight: 400;
+}
+main .sobre-mim p {
+    font-weight: 100;
+    font-size: .9rem;
+    word-spacing: .2rem;
+    padding: 1rem 1.375rem;
+    text-align: justify;
+}
+
+/*   MAIN - .COMPETENCIAS   */
+main .competencias {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-secundaria);
+    max-width: 105.6rem;
+    border-radius: 10px;
+    height: 14rem;
+    margin: 0 4.8125rem 1.375rem;
+}
+main .competencias h2 {
+    color: var(--cor-texto-primaria);
+    padding: 1.3rem 1.375rem 0;
+    font-size: 1.28rem;
+    font-weight: 400; 
+}
+main button#competencias {
+    margin-left: 1.375rem;
+    margin-top: 1.2rem;
+    border: .1rem solid var(--cor-terciaria);
+}
+main button#competencias:hover {
+    background-color: #d0e8ff;
+    border: .1rem solid var(--cor-terciaria);
+}
+main .competencias h3 {
+    color: var(--cor-texto-primaria);
+    margin: 1rem 1.375rem;
+    font-size: 1rem;
+    font-weight: 5; 
+}
+main .competencias h3.linha {
+    padding-bottom: .8rem;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+/*   MEDIA QUERIES   */
+@media (max-width: 939px) {
+    :root {
+        font-size: 12px;
+    }
+}
+@media (max-width: 800px) {
+    :root {
+        font-size: 10px;
+    }
+}
+@media (max-width: 570px) {
+    :root {
+        font-size: 8px;
+    }
 }
