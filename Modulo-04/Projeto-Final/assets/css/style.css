@@ -1,0 +1,282 @@
+/************ DOCUMENTAÇÃO
+
+-  ROOT & VARIÁVEIS & FONTS
+-  REGRAS GERAIS
+-  HEADER
+-  MAIN ASIDE = [PESQUISA, BUTTON, TIPO-IMOVEL, MIN-E-MAX, NUM-DE-QUARTOS]
+ 
+
+-  FOOTER
+*/
+
+/*   ROOT & VARIÁVEIS & FONTS  */
+:root {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*   VARIÁVEIS   */
+    --cor-primaria: #FFF;
+    --cor-secundaria: #138fcd;
+    --cor-terciaria: #036694;
+    --area-de-pesquisa: #fdd685;
+}
+@font-face {
+    font-family: RopaSans;
+    src: url(../fonts/RopaSans/RopaSans-Regular.ttf)
+}
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf)
+}
+@font-face {
+    font-family: Rambla;
+    src: url(../fonts/Rambla/Rambla-Bold.ttf)
+}
+
+
+/*   REGRAS GERAIS   */
+header .largura-maxima, main .largura-maxima, footer .largura-maxima {
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+
+/*   HEADER   */
+header {
+    width: 100%;
+    height: 3.733333rem;
+    background-color: var(--cor-secundaria);
+}
+header .largura-maxima {
+    height: 3.733333rem;
+}
+header .largura-maxima, header .largura-maxima .logo a {
+    display: flex;
+    align-items: center;
+}
+header .largura-maxima .logo a img {
+    height: 2.5666666rem;
+    width: 3.2rem;
+}
+header .largura-maxima .logo a h1 {
+    font-family: Rambla, Arial, Helvetica, sans-serif;
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+}
+header .largura-maxima nav {
+    width: 100%;
+    justify-content: space-between;
+}
+header .largura-maxima nav, header .largura-maxima nav div {
+    display: flex;
+    align-items: center;
+}
+header .largura-maxima nav .navegacao-esquerda {
+    margin: 0 3rem;
+}
+header .largura-maxima nav .navegacao-esquerda .elemento-navegacao a, .navegacao-direita .elemento-navegacao a {
+    padding: 0 1rem;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--cor-primaria);
+}
+.elemento-navegacao {
+    height: 3.733333rem;
+}
+.elemento-navegacao:hover {
+    background-color: #42a0cf91;
+}
+
+
+/*   MAIN   */
+main .largura-maxima aside {
+    background-color: var(--area-de-pesquisa);
+    color: #74623d;
+    font-size: .9rem;
+    max-width: 17.8666666rem;
+    margin-top: 1.333333rem;
+    padding: 1.5rem .6666666rem;
+}
+
+/*   MAIN ASIDE - PESQUISA */
+main .largura-maxima aside .container .pesquisa input {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: .26666666rem;
+    color: rgba(0,0,0,.54);
+    box-sizing: border-box;
+    font-size: .966666rem;
+    padding: 0.8rem;
+    margin: .7rem 0;
+    height: 2.9333333rem;
+    max-width: 17.933333rem;
+    width: 100%;
+}
+main .largura-maxima aside .container .pesquisa input:focus {
+    border: 1.7px solid #1190cd;
+}
+
+/*   MAIN ASIDE - BuTTON   */
+main .largura-maxima aside .container .imovel-com .button-container {
+    display: flex;
+    align-items: center;
+}
+main .largura-maxima aside .container .imovel-com .button-container p {
+    margin-left: 2rem;
+}
+main .largura-maxima aside .container .imovel-com input {
+    display: none;
+}
+main .largura-maxima aside .container .imovel-com .button-container .button {
+    position: relative;
+    margin: .4rem 0 .4rem .4rem;
+    width: 3.3333333rem;
+    height: 2rem;
+}
+main .largura-maxima aside .container .imovel-com .button-container label {
+    position: absolute;
+    width: 53px;
+    height: 32px;
+    background-color: #e5cf8c;
+    border-radius: 20px;
+    padding: 2px 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+main .largura-maxima aside .container .imovel-com .button-container label span {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*   MENU ASIDE - TIPO-IMOVEL   */
+main .largura-maxima aside .container .tipo-imovel {
+    margin-top: 1rem;
+}
+main .largura-maxima aside .container .tipo-imovel select[name="tipo-imovel"] {
+    border: none;
+    border-radius: .26666666rem;
+    color: rgba(0,0,0,.54);
+    box-sizing: border-box;
+    font-size: .966666rem;
+    padding: 0.8rem;
+    height: 2.9333333rem;
+    max-width: 17.933333rem;
+    width: 100%;
+    margin: .7rem 0;
+}
+
+/*   MENU ASIDE - MIN-E-MAX   */
+main .largura-maxima aside .container .min-e-max {
+    display: flex;
+    justify-content: space-between;
+    margin: .7rem 0;
+}
+main .largura-maxima aside .container .min-e-max .preco-min input, .preco-max input {
+    border: none;
+    border-radius: .26666666rem;
+    color: rgba(0,0,0,.54);
+    padding: 0.8rem;
+    box-sizing: border-box;
+    height: 2.9333333rem;
+    max-width: 7rem;
+    width: 100%;
+    margin: .7rem 0;
+}
+main .largura-maxima aside .container .min-e-max .preco-min input:focus, .preco-max input:focus {
+    border: 1.7px solid #1190cd;
+}
+
+/*   MENU ASIDE - NUM-DE-QUARTOS   */
+main .largura-maxima aside .container .num-de-quartos .numeros {
+    display: flex;
+    justify-content: space-around;
+    margin: .7rem 0;
+}
+main .largura-maxima aside .container .num-de-quartos .numeros .num1, .num2, .num3, .num4, .num5 {
+    width: 2.66666rem;
+    height: 2.133333rem;
+    background-color: var(--cor-primaria);
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 0 rgba(131, 131, 131, 0.418);
+}
+
+
+/*   FOOTER   */
+footer {
+    font-family: RopaSans, Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 5rem;
+    background-color: var(--cor-terciaria);
+}
+footer .largura-maxima .container div h2 {
+    color: #ffffff6c;
+}
+footer .largura-maxima .container div a {
+    color: var(--cor-primaria);
+}
+footer .largura-maxima .container .anunciante a img {
+    height: 2.3rem;
+    border-radius: .3rem;
+}
+footer .largura-maxima .container .anunciante .img-redes-sociais a img {
+    width: 2rem;
+    height: 2rem;
+}
+footer .largura-maxima .container {
+    display: flex;
+    justify-content: space-between;
+}
+footer .largura-maxima .container .encontre-imoveis, .institucional, .mais-produtos, .anunciante {
+    margin: 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+footer .largura-maxima .container .encontre-imoveis a, .institucional a, .mais-produtos a, .anunciante a, .img-redes-sociais h2, .download h2 {
+    margin-top: 1.7rem;
+}
+footer .largura-maxima .container .anunciante .img-redes-sociais a img, .download a img {
+    margin: .25rem .25rem 0 0;
+}
+footer .largura-maxima .container .institucional, .mais-produtos, .anunciante {
+    border-left: 1px solid rgba(63, 63, 63, 0.507);
+    padding-left: 3rem;
+}
+/*   termos-e-politicas - logo OLX*/
+footer .termos-e-politicas {
+    width: 100%;
+    height: 5.26666666rem;
+    background-color: #094f70;
+    color: white;
+    font-size: 1rem;
+}
+footer .termos-e-politicas .largura-maxima {
+    height: 5.26666666rem;
+}
+footer .termos-e-politicas .logo-olx .cont-baixo {
+    font-family: Rambla;
+    font-size: 1.9rem;
+}
+footer .termos-e-politicas .logo-olx .cont-baixo span{
+    font-size: 3rem;
+}
+
+/*   ALINHAMENTOS   */
+footer .termos-e-politicas .largura-maxima, .cont-termos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .termos-e-politicas .largura-maxima .cont-termos p {
+    color: #ffffff6c;
+    margin-right: 4rem;
+}
+footer .termos-e-politicas .largura-maxima .cont-termos a {
+    color: var(--cor-primaria);
+    margin-left: 1rem;
+}
