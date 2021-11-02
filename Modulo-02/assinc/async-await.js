@@ -1,7 +1,7 @@
 /*
 Para que trabalhemos com async await, temos que trabalhar com uma função. Para declaramos uma função async dentro de uma função, logo, a função que recebe, é uma promise.
 
-Dentro dessa nossa função async(), podemos fazer coisas asincronas de uma maneira síncrona. 
+Dentro dessa nossa função async(), podemos fazer coisas assíncronas de uma maneira síncrona. 
 
 Embora o async retorne uma promise, o await diz que, espere o que está a direita resolver. Ou seja, espera até que a requisição seja feita, retornando o valor.
 

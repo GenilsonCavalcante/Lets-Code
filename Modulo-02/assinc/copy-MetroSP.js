@@ -1,5 +1,3 @@
-
-
 // const response = fetch(`https://private-3923c4-santandercoders809.apiary-mock.com/stations`)
 
 // response

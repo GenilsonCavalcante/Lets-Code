@@ -7,3 +7,8 @@ let input = document.querySelector('#input-button');
 
 clickButton(button, span, input);
 
+
+// CREATE ELEMENTS
+import { createElements } from './create-elements.js';
+
+createElements();
